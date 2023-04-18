@@ -1,6 +1,13 @@
-import "./Login.css";
+import "./Login.scss";
+import { Link, useNavigate } from "react-router-dom";
 
 function Inputs() {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate("/main");
+  };
+
   return (
     <div class="inputs">
       <input
@@ -9,7 +16,7 @@ function Inputs() {
         placeholder="  전화번호, 사용자 이름 또는 이메일"
       />
       <input id="Password" type="password" placeholder="  비밀번호" />
-      <button id="login-button" class="no-login">
+      <button id="login-button" class="no-login" onClick={handleLogin}>
         로그인
       </button>
     </div>

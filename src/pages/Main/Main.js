@@ -1,4 +1,4 @@
-import "./Main.css";
+import "./Main.scss";
 
 //위스타 배너
 function Nav() {
